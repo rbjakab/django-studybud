@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <title>Cool Websites</title>
+</head>
+
+<body>
+    <h1>Cool Websites</h1>
+    <p>Here are some cool websites:</p>
+    <ul>
+        <li><a href="http://www.wikipedia.org">Wikipedia</a></li>
+    </ul>
+</body>
+
+<script>
+    let getRooms = async () => {
+        let response = await fetch('http://127.0.0.1:8000/api/rooms/')
+        let rooms = await response.json()
+        console.log('RESPONSE', rooms)
+    }
+
+    getRooms()
+</script>
+
+</html>
